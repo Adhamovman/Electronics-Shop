@@ -1,0 +1,64 @@
+#categories {
+  padding: 20px 0 80px 0;
+}
+
+#category-row {
+  grid-template-columns: auto auto auto;
+  grid-gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  #category-row {
+    grid-gap: 32px;
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 556px) {
+  #category-row {
+    grid-gap: 20px;
+    grid-template-columns: auto;
+  }
+}
+
+.category-card {
+  position: relative;
+  cursor: pointer;
+}
+.category-card .huge-p {
+  color: #fff;
+}
+.category-card img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  max-height: 200px;
+}
+
+.back-gradient {
+  border-radius: 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: background-image 1s ease-in-out;
+  background-image: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70c05b 90.81%);
+}
+.back-gradient:hover {
+  background-image: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #ff6633 100%);
+  transition: background-image 1s ease-in-out;
+}
+
+.category-card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .modal-content {
+    max-width: 270px;
+    padding: 40px 35px 35px 35px;
+  }
+}

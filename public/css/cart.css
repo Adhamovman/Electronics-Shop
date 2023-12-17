@@ -1,0 +1,75 @@
+#cart {
+  margin-bottom: 80px;
+}
+#cart .product-discount {
+  position: relative;
+}
+#cart .card img {
+  border-radius: 4px;
+}
+
+.seperate-border {
+  border-top: 2px solid #f3f2f1;
+  border-bottom: 2px solid #f3f2f1;
+  padding: 24px 0;
+}
+.cick i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  opacity: 1;
+  color: #f70000;
+  cursor: pointer;
+}
+.color-green {
+  color: #70c05b;
+}
+
+.book-btn {
+  background-color: #ff6633;
+  padding: 12px 16px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.book-btn:hover {
+  background-color: #ff5218;
+}
+
+.cart-all .card img {
+  max-height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-all {
+    flex-wrap: wrap;
+  }
+}
+.count-product button {
+  background-color: #70c05b;
+  border-radius: 0;
+  border-color: #70c05b;
+}
+.count-product button:hover, .count-product button:active {
+  background-color: #48a031 !important;
+  border-color: #70c05b !important;
+}
+.count-product span {
+  background-color: #70c05b;
+  padding: 7px;
+  color: #fff;
+}
+
+.deleteCost {
+  text-decoration: line-through;
+}
+
+.btn-left {
+  border-radius: 4px 0 0 4px !important;
+}
+
+.btn-right {
+  border-radius: 0px 4px 4px 0px !important;
+}

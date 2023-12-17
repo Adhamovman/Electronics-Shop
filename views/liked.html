@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/liked.css" />
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <a class="logo d-flex align-items-center" href="">
+          <img class="" src="/image/logo.png" alt="" />
+          <p class="huge-p m-0 ms-2 d-none d-lg-block">Северяночка</p>
+        </a>
+        <div class="align-items-center d-none d-md-flex main-btn">
+          <img id="catalog-btn" onclick="tooglePanel()" src="/image/menu-btn.png" alt="" />
+          <a href="categories.html" class="main-p m-0 d-none d-lg-block ms-2 px-2 catigories-link">Каталог</a>
+        </div>
+
+        <form class="search" action="">
+          <a href="search">
+            <input class="search-place" type="search" placeholder="Найти товар" /></a>
+          <img class="search-icon" src="/image/search.png" alt="" />
+        </form>
+        <a class="action text-center d-none d-md-block" href="liked">
+          <img src="image/likedd.svg" alt="" />
+          <span class="natification likes">0</span>
+
+          <p class="main-p m-0">Избранное</p>
+        </a>
+        <a class="action text-center d-none d-md-block" href="order">
+          <img src="/image/cube-icon.png" alt="" />
+          <span class="natification order">0</span>
+
+          <p class="main-p m-0">Заказы</p>
+        </a>
+        <a class="action text-center d-none d-md-block" href="cart">
+          <img src="/image/shopping-cart.png" alt="" />
+          <p class="main-p m-0">Корзина</p>
+          <span class="natification cart m-0">0</span>
+        </a>
+        <div class="group p-0 m-0">
+          <button class="user align-items-center d-none d-md-flex open-modal">
+            <img class="user-img" src="/image/user.png" alt="" />
+  
+            <p class="main-p m-0 ms-2 d-none d-lg-block username">Login</p>
+          </button>
+          <ul id="drop" class="d-none dropdown_menu p-0 m-0">
+            <li><button  class="dropdown_item" href="#">Me</button></li>
+            <li><button id="logout" class="dropdown_item" href="#">Log Out</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="modall">
+    <div class="modal-content">
+      <h4 class="little-h text-center">Enter</h4>
+      <label for="">
+        <p class="main-p m-0">Email</p>
+      </label>
+      <input id="email" class="w-100 input" type="email" />
+
+      <label for="">
+        <p class="main-p m-0">Password</p>
+      </label>
+      <input id="password" class="w-100 input" type="password" />
+      <p class="hint"></p>
+      <button class="modal-enter w-100" id="send">Enter</button>
+      <button class="close-modal">
+        <img src="/image/close-btn.svg" alt="" />
+      </button>
+      <div class="btns mt-4 d-flex w-100 justify-content-between">
+        <a href="register" class="btn btn-main little-p">Регистрация</a>
+        <a href="forgotpassword" class="little-p p-0 forget-password">Забыли пароль?</a>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-panel py-4 d-none">
+    <div class="container d-grid catalog-list"></div>
+  </div>
+
+  <div class="phone-task d-md-none">
+    <div class="container d-flex justify-content-between align-items-center">
+      <button class="action text-center phone-btn text-center p-0" onclick="tooglePanel()">
+        <img src="/image/phone-btn.png" alt="" />
+        <p class="phone-p m-0">Каталог</p>
+      </button>
+      <a class="action text-center" href="liked">
+        <span class="natification likes">0</span>
+
+        <img src="/image/likedd.svg" alt="" />
+        <p class="phone-p m-0">Избранное</p>
+      </a>
+      <a class="action text-center" href="#">
+        <span class="natification order">0</span>
+        <img src="/image/cube-icon.png" alt="" />
+        <p class="phone-p m-0">Заказы</p>
+
+      </a>
+      <a class="action text-center" href="cart">
+        <img src="/image/shopping-cart.png" alt="" />
+        <span class="natification cart">0</span>
+
+        <p class="phone-p m-0">Корзина</p>
+      </a>
+      <button class="user align-items-center d-flex open-phone-modal">
+        <img class="user-img" src="/image/user.png" alt="" />
+      </button>
+    </div>
+  </div>  <main>
+
+
+
+    <section id="favourites">
+      <div class="container">
+        <div class="liked-row d-grid all-row"></div>
+      </div>
+    </section>
+    <section id="not-found" class="hide">
+      <div class="container d-flex flex-column align-items-center">
+        <img class="w-100 no-product" src="/image/no-product.png" alt="" />
+        <h class="little-h text-center mb-3">Oops! <br />
+          Item not found</h>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <div class="all">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="footer-logo">
+            <img src="/image/footer-logo.png" alt="" />
+          </div>
+          <ul class="footer-nav d-none d-md-flex flex-wrap m-0 p-0 ps-2">
+            <li class="footer-link"><a href="#">О компании</a></li>
+            <li class="footer-link"><a href="#">Контакты</a></li>
+            <li class="footer-link"><a href="#">Вакансии</a></li>
+            <li class="footer-link"><a href="#">Статьи</a></li>
+            <li class="footer-link">
+              <a href="#">Политика обработки персональных данных</a>
+            </li>
+          </ul>
+          <div class="socials d-none d-md-inline-block">
+            <a href="#"><img src="/image/logo-insta.png" alt="" /></a>
+            <a href="#"><img src="/image/logo-vkontakte.png" alt="" /></a>
+            <a href="#"><img src="/image/logo-facebook.png" alt="" /></a>
+            <a href="#"><img src="/image/logo-ok.png" alt="" /></a>
+          </div>
+          <div class="phone d-none d-md-flex flex-nowrap">
+            <img src="/image/logo-phone.png" alt="" />
+            <p class="main-p m-0 ms-1 d-flex flex-nowrap">
+              8 800 777 33 33
+            </p>
+          </div>
+          <div class="socailsAndPhone">
+            <div class="socials d-md-none">
+              <a href="#"><img src="/image/logo-insta.png" alt="" /></a>
+              <a href="#"><img src="/image/logo-vkontakte.png" alt="" /></a>
+              <a href="#"><img src="/image/logo-facebook.png" alt="" /></a>
+              <a href="#"><img src="/image/logo-ok.png" alt="" /></a>
+            </div>
+            <div class="mt-2 phone d-flex align-items-center d-md-none flex-nowrap">
+              <img src="/image/logo-phone.png" alt="" />
+              <p class="main-p m-0 ms-1 d-flex flex-nowrap">
+                8 800 777 33 33
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="footer-nav d-flex d-md-none flex-wrap m-0 p-0 my-3">
+        <li class="footer-link"><a href="#">О компании</a></li>
+        <li class="footer-link"><a href="#">Контакты</a></li>
+        <li class="footer-link"><a href="#">Вакансии</a></li>
+        <li class="footer-link"><a href="#">Статьи</a></li>
+        <li class="footer-link">
+          <a href="#">Политика обработки персональных данных</a>
+        </li>
+      </ul>
+      <div class="space d-md-none"></div>
+    </div>
+  </footer>
+  <script src="/js/common.js"></script>
+  <script src="/js/card.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/liked.js"></script>
+</body>
+
+</html>

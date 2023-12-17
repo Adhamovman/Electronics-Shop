@@ -1,0 +1,149 @@
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background-color: #fbf8ec;
+}
+
+.huge-h {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.main-h {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+}
+
+.little-h {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+#contact {
+    width: calc(100% - 38px);
+}
+.huge-p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+}
+
+.main-p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.little-p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #bfbfbf;
+}
+
+.modal-content {
+    margin: 50px auto 0 auto;
+    padding: 30px 40px 20px 40px;
+    max-width: 400px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.5s;
+    box-shadow: 8px 16px 32px rgba(255, 102, 51, 0.2);
+    border-radius: 4px;
+}
+
+.modal-content .main-p,
+.modal-content .forget-password {
+    color: #8f8f8f;
+}
+
+.input {
+    border: 1px solid #70c05b;
+    box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.close-modal {
+    border-radius: 4px;
+    padding: 10px 14px;
+    background-color: #f3f2f1;
+}
+
+.close-modal img {
+    max-width: 16px;
+}
+
+.modal-content-show {
+    top: 100px;
+}
+#hint {
+    color: rgb(250, 95, 95);
+}
+.modal-enter {
+    background: #fcd5ba;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ff6633;
+    padding: 8px;
+    margin-top: 18px;
+    transition: all 0.2s ease;
+}
+
+.modal-enter:hover {
+    background-color: #ff6633;
+    color: #fff;
+}
+
+a {
+    color: #70c05b;
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.btn-main {
+    background-color: transparent;
+    border-color: #70c05b;
+    color: #70c05b;
+}
+
+.btn-main:hover,
+.btn-main:active {
+    background-color: #ff6633 !important;
+    color: #fff;
+    border-color: #ff6633 !important;
+}
+
+.submit-btn {
+    background-color: #ff6633;
+    color: #fff;
+    padding: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #ff4c10;
+}

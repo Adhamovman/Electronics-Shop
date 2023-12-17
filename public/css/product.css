@@ -1,0 +1,115 @@
+.admin-row {
+  grid-gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-head img {
+  position: relative;
+}
+
+#edit,
+#delete,
+.edit-image {
+  position: absolute;
+  top: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.modal-body>* {
+  width: 100%;
+}
+
+label>* {
+  padding: 4px !important;
+  margin: 4px;
+  width: 100%;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+
+#edit i,
+.edit-image i,
+#delete i {
+  font-size: 16px;
+}
+
+.select-image {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer !important;
+}
+
+.edit-image {
+  top: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(96, 189, 42, 0.5);
+}
+
+#edit {
+  right: 10px;
+  background-color: rgba(42, 189, 189, 0.5);
+}
+
+#delete {
+  left: 10px;
+  background-color: rgb(255, 82, 82, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+  .admin-row {
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 568px) {
+  .admin-row {
+    grid-gap: 20px;
+  }
+
+  .product-discount {
+    padding: 2px 5px;
+    font-size: 12px;
+
+  }
+
+
+  .huge-p {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .category-p {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  .little-p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 12px;
+
+  }
+}

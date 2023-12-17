@@ -1,0 +1,26 @@
+.user-row {
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+.card-text {
+    font-size: 14px;
+}
+.card-title {
+    font-size: 16px;
+}
+.admin {
+    top: 5px;
+    right: 5px;
+}
+@media screen and (max-width: 768px) {
+    .user-row {
+        grid-template-columns: auto auto;
+        gap: 16px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .user-row {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+}
